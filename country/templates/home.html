@@ -1,0 +1,111 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+
+<div class="mt-4 p-5 bg-warning text-white rounded">
+  <h1>Welcome To Countries Statistics</h1>
+    <p>Live Statistics For Every Country On The Planet !</p>
+</div>
+
+  <br/><br>
+
+<div class="container">
+  <div class="row">
+    {% for x in api %}
+      <div class="col-sm">
+        <div class="card" style="width: 18rem;">
+          <img src="{{ x.flags.png }}" class="card-img-top" alt="{{ 'test' }}">
+          <div class="card-body">
+            <h5 class="card-title">{{ x.name.common }}</h5>
+            <p class="card-text">Capital: {{ x.capital.0 }}
+              <br>
+              Continent: {{ x.continents.0 }}
+              <br>
+              Subregion: {{ x.subregion  }}
+              <br>
+              Timezone: {{ x.timezones.0 }}
+              <br>
+              Population: {{ x.population }}
+              <br>
+              Currency:
+              {{ x.currencies.XOF.name }}{{ x.currencies.HKD.name }}{{ x.currencies.AED.name }}{{ x.currencies.XCD.name }}{{ x.currencies.KMF.name }}
+              {{ x.currencies.NZD.name }}{{ x.currencies.BGN.name }}{{ x.currencies.DJF.name }}{{ x.currencies.LAK.name }}{{ x.currencies.LBP.name }}
+              {{ x.currencies.PAB.name }}{{ x.currencies.USD.name }}{{ x.currencies.BBD.name }}{{ x.currencies.GBP.name }}{{ x.currencies.IMP.name }}
+              {{ x.currencies.BTN.name }}{{ x.currencies.INR.name }}{{ x.currencies.BIF.name }}{{ x.currencies.CNY.name }}{{ x.currencies.AUD.name }}
+              {{ x.currencies.LYD.name }}{{ x.currencies.BAM.name }}{{ x.currencies.TVD.name }}{{ x.currencies.AOA.name }}{{ x.currencies.MGA.name }}
+              {{ x.currencies.MRU.name }}{{ x.currencies.JEP.name }}{{ x.currencies.CVE.name }}{{ x.currencies.MXN.name }}{{ x.currencies.LKR.name }}
+              {{ x.currencies.VES.name }}{{ x.currencies.FKP.name }}{{ x.currencies.MWK.name }}{{ x.currencies.EUR.name }}{{ x.currencies.SRD.name }}
+              {{ x.currencies.GNF.name }}{{ x.currencies.ZWL.name }}{{ x.currencies.RWF.name }}{{ x.currencies.KGS.name }}{{ x.currencies.RUB.name }}
+              {{ x.currencies.UZS.name }}{{ x.currencies.DZD.name }}{{ x.currencies.MAD.name }}{{ x.currencies.TZS.name }}{{ x.currencies.KYD.name }}
+              {{ x.currencies.IRR.name }}{{ x.currencies.ILS.name }}{{ x.currencies.XAF.name }}{{ x.currencies.SGD.name }}{{ x.currencies.MMK.name }}
+              {{ x.currencies.CAD.name }}{{ x.currencies.ARS.name }}{{ x.currencies.MYR.name }}{{ x.currencies.SZL.name }}{{ x.currencies.ZAR.name }}
+              {{ x.currencies.DKK.name }}{{ x.currencies.FOK.name }}{{ x.currencies.SLL.name }}{{ x.currencies.UGX.name }}{{ x.currencies.PKR.name }}
+              {{ x.currencies.CKD.name }}{{ x.currencies.BOB.name }}{{ x.currencies.FJD.name }}{{ x.currencies.BRL.name }}{{ x.currencies.VUV.name }}
+              {{ x.currencies.UAH.name }}{{ x.currencies.BHD.name }}{{ x.currencies.GMD.name }}{{ x.currencies.PLN.name }}{{ x.currencies.CUC.name }}
+              {{ x.currencies.CUP.name }}{{ x.currencies.JOD.name }}{{ x.currencies.TMT.name }}{{ x.currencies.GHS.name }}{{ x.currencies.MDL.name }}
+              {{ x.currencies.ERN.name }}{{ x.currencies.ETB.name }}{{ x.currencies.MZN.name }}{{ x.currencies.ANG.name }}{{ x.currencies.SYP.name }}
+              {{ x.currencies.BDT.name }}{{ x.currencies.VND.name }}{{ x.currencies.TWD.name }}{{ x.currencies.WST.name }}{{ x.currencies.PGK.name }}
+              {{ x.currencies.GGP.name }}{{ x.currencies.UYU.name }}{{ x.currencies.KPW.name }}{{ x.currencies.HTG.name }}{{ x.currencies.SBD.name }}
+              {{ x.currencies.STN.name }}{{ x.currencies.EGP.name }}{{ x.currencies.GTQ.name }}{{ x.currencies.NOK.name }}{{ x.currencies.BZD.name }}
+              {{ x.currencies.BYN.name }}{{ x.currencies.IDR.name }}{{ x.currencies.CLP.name }}{{ x.currencies.COP.name }}{{ x.currencies.TRY.name }}
+              {{ x.currencies.NIO.name }}{{ x.currencies.TND.name }}{{ x.currencies.RON.name }}{{ x.currencies.NPR.name }}{{ x.currencies.PYG.name }}
+              {{ x.currencies.MOP.name }}{{ x.currencies.XPF.name }}{{ x.currencies.SCR.name }}{{ x.currencies.SHP.name }}{{ x.currencies.JMD.name }}
+              {{ x.currencies.GYD.name }}{{ x.currencies.KHR.name }}{{ x.currencies.THB.name }}{{ x.currencies.MVR.name }}{{ x.currencies.MUR.name }}
+              {{ x.currencies.PHP.name }}{{ x.currencies.SDG.name }}{{ x.currencies.JPY.name }}{{ x.currencies.GEL.name }}{{ x.currencies.TJS.name }}
+              {{ x.currencies.RSD.name }}{{ x.currencies.AMD.name }}{{ x.currencies.BWP.name }}{{ x.currencies.AFN.name }}{{ x.currencies.QAR.name }}
+              {{ x.currencies.TTD.name }}{{ x.currencies.YER.name }}{{ x.currencies.BND.name }}{{ x.currencies.ISK.name }}{{ x.currencies.SOS.name }}
+              {{ x.currencies.IQD.name }}{{ x.currencies.ALL.name }}{{ x.currencies.HNL.name }}{{ x.currencies.CZK.name }}{{ x.currencies.SEK.name }}
+              {{ x.currencies.NAD.name }}{{ x.currencies.NGN.name }}{{ x.currencies.AWG.name }}{{ x.currencies.CRC.name }}{{ x.currencies.GIP.name }}
+              {{ x.currencies.SAR.name }}{{ x.currencies.BMD.name }}{{ x.currencies.KZT.name }}{{ x.currencies.LSL.name }}{{ x.currencies.SSP.name }}
+              {{ x.currencies.KID.name }}{{ x.currencies.DOP.name }}{{ x.currencies.AZN.name }}{{ x.currencies.KRW.name }}{{ x.currencies.TOP.name }}
+              {{ x.currencies.KWD.name }}{{ x.currencies.OMR.name }}{{ x.currencies.MNT.name }}{{ x.currencies.MKD.name }}{{ x.currencies.CDF.name }}
+              {{ x.currencies.HUF.name }}{{ x.currencies.KES.name }}{{ x.currencies.ZMW.name }}{{ x.currencies.PEN.name }}{{ x.currencies.CHF.name }}
+              {{ x.currencies.BSD.name }}{{ x.currencies.LRD.name }}
+              <br>
+              Currency Symbol:
+              {{ x.currencies.XOF.symbol }}{{ x.currencies.HKD.symbol }}{{ x.currencies.AED.symbol }}{{ x.currencies.XCD.symbol }}{{ x.currencies.KMF.symbol }}
+              {{ x.currencies.NZD.symbol }}{{ x.currencies.BGN.symbol }}{{ x.currencies.DJF.symbol }}{{ x.currencies.LAK.symbol }}{{ x.currencies.LBP.symbol }}
+              {{ x.currencies.PAB.symbol }}{{ x.currencies.USD.symbol }}{{ x.currencies.BBD.symbol }}{{ x.currencies.GBP.symbol }}{{ x.currencies.IMP.symbol }}
+              {{ x.currencies.BTN.symbol }}{{ x.currencies.INR.symbol }}{{ x.currencies.BIF.symbol }}{{ x.currencies.CNY.symbol }}{{ x.currencies.AUD.symbol }}
+              {{ x.currencies.LYD.symbol }}{{ x.currencies.BAM.symbol }}{{ x.currencies.TVD.symbol }}{{ x.currencies.AOA.symbol }}{{ x.currencies.MGA.symbol }}
+              {{ x.currencies.MRU.symbol }}{{ x.currencies.JEP.symbol }}{{ x.currencies.CVE.symbol }}{{ x.currencies.MXN.symbol }}{{ x.currencies.LKR.symbol }}
+              {{ x.currencies.VES.symbol }}{{ x.currencies.FKP.symbol }}{{ x.currencies.MWK.symbol }}{{ x.currencies.EUR.symbol }}{{ x.currencies.SRD.symbol }}
+              {{ x.currencies.GNF.symbol }}{{ x.currencies.ZWL.symbol }}{{ x.currencies.RWF.symbol }}{{ x.currencies.KGS.symbol }}{{ x.currencies.RUB.symbol }}
+              {{ x.currencies.UZS.symbol }}{{ x.currencies.DZD.symbol }}{{ x.currencies.MAD.symbol }}{{ x.currencies.TZS.symbol }}{{ x.currencies.KYD.symbol }}
+              {{ x.currencies.IRR.symbol }}{{ x.currencies.ILS.symbol }}{{ x.currencies.XAF.symbol }}{{ x.currencies.SGD.symbol }}{{ x.currencies.MMK.symbol }}
+              {{ x.currencies.CAD.symbol }}{{ x.currencies.ARS.symbol }}{{ x.currencies.MYR.symbol }}{{ x.currencies.SZL.symbol }}{{ x.currencies.ZAR.symbol }}
+              {{ x.currencies.DKK.symbol }}{{ x.currencies.FOK.symbol }}{{ x.currencies.SLL.symbol }}{{ x.currencies.UGX.symbol }}{{ x.currencies.PKR.symbol }}
+              {{ x.currencies.CKD.symbol }}{{ x.currencies.BOB.symbol }}{{ x.currencies.FJD.symbol }}{{ x.currencies.BRL.symbol }}{{ x.currencies.VUV.symbol }}
+              {{ x.currencies.UAH.symbol }}{{ x.currencies.BHD.symbol }}{{ x.currencies.GMD.symbol }}{{ x.currencies.PLN.symbol }}{{ x.currencies.CUC.symbol }}
+              {{ x.currencies.CUP.symbol }}{{ x.currencies.JOD.symbol }}{{ x.currencies.TMT.symbol }}{{ x.currencies.GHS.symbol }}{{ x.currencies.MDL.symbol }}
+              {{ x.currencies.ERN.symbol }}{{ x.currencies.ETB.symbol }}{{ x.currencies.MZN.symbol }}{{ x.currencies.ANG.symbol }}{{ x.currencies.SYP.symbol }}
+              {{ x.currencies.BDT.symbol }}{{ x.currencies.VND.symbol }}{{ x.currencies.TWD.symbol }}{{ x.currencies.WST.symbol }}{{ x.currencies.PGK.symbol }}
+              {{ x.currencies.GGP.symbol }}{{ x.currencies.UYU.symbol }}{{ x.currencies.KPW.symbol }}{{ x.currencies.HTG.symbol }}{{ x.currencies.SBD.symbol }}
+              {{ x.currencies.STN.symbol }}{{ x.currencies.EGP.symbol }}{{ x.currencies.GTQ.symbol }}{{ x.currencies.NOK.symbol }}{{ x.currencies.BZD.symbol }}
+              {{ x.currencies.BYN.symbol }}{{ x.currencies.IDR.symbol }}{{ x.currencies.CLP.symbol }}{{ x.currencies.COP.symbol }}{{ x.currencies.TRY.symbol }}
+              {{ x.currencies.NIO.symbol }}{{ x.currencies.TND.symbol }}{{ x.currencies.RON.symbol }}{{ x.currencies.NPR.symbol }}{{ x.currencies.PYG.symbol }}
+              {{ x.currencies.MOP.symbol }}{{ x.currencies.XPF.symbol }}{{ x.currencies.SCR.symbol }}{{ x.currencies.SHP.symbol }}{{ x.currencies.JMD.symbol }}
+              {{ x.currencies.GYD.symbol }}{{ x.currencies.KHR.symbol }}{{ x.currencies.THB.symbol }}{{ x.currencies.MVR.symbol }}{{ x.currencies.MUR.symbol }}
+              {{ x.currencies.PHP.symbol }}{{ x.currencies.SDG.symbol }}{{ x.currencies.JPY.symbol }}{{ x.currencies.GEL.symbol }}{{ x.currencies.TJS.symbol }}
+              {{ x.currencies.RSD.symbol }}{{ x.currencies.AMD.symbol }}{{ x.currencies.BWP.symbol }}{{ x.currencies.AFN.symbol }}{{ x.currencies.QAR.symbol }}
+              {{ x.currencies.TTD.symbol }}{{ x.currencies.YER.symbol }}{{ x.currencies.BND.symbol }}{{ x.currencies.ISK.symbol }}{{ x.currencies.SOS.symbol }}
+              {{ x.currencies.IQD.symbol }}{{ x.currencies.ALL.symbol }}{{ x.currencies.HNL.symbol }}{{ x.currencies.CZK.symbol }}{{ x.currencies.SEK.symbol }}
+              {{ x.currencies.NAD.symbol }}{{ x.currencies.NGN.symbol }}{{ x.currencies.AWG.symbol }}{{ x.currencies.CRC.symbol }}{{ x.currencies.GIP.symbol }}
+              {{ x.currencies.SAR.symbol }}{{ x.currencies.BMD.symbol }}{{ x.currencies.KZT.symbol }}{{ x.currencies.LSL.symbol }}{{ x.currencies.SSP.symbol }}
+              {{ x.currencies.KID.symbol }}{{ x.currencies.DOP.symbol }}{{ x.currencies.AZN.symbol }}{{ x.currencies.KRW.symbol }}{{ x.currencies.TOP.symbol }}
+              {{ x.currencies.KWD.symbol }}{{ x.currencies.OMR.symbol }}{{ x.currencies.MNT.symbol }}{{ x.currencies.MKD.symbol }}{{ x.currencies.CDF.symbol }}
+              {{ x.currencies.HUF.symbol }}{{ x.currencies.KES.symbol }}{{ x.currencies.ZMW.symbol }}{{ x.currencies.PEN.symbol }}{{ x.currencies.CHF.symbol }}
+              {{ x.currencies.BSD.symbol }}{{ x.currencies.LRD.symbol }}
+            </p>
+            <a href="{{ x.maps.googleMaps }}" class="btn btn-success">Map view</a>
+          </div>
+        </div>
+        <br>
+      </div>
+      <br>
+    {% endfor %}
+  </div>
+</div>
+
+{% endblock %}
